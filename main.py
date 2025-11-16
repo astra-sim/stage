@@ -426,11 +426,11 @@ def main():
         else:
             print("[Warning] MICROBATCH OPTIMIZE sometimes generate incorrect graphs, use with caution!")
             assert False, "disable for now"
-        transformer_moe = ReplicateGraph.apply(
-            transformer_moe,
-            inplace=True,
-            old_symbol_map_new_symbol={"Batch": "MicroBatch"},
-        )
+            transformer_moe = ReplicateGraph.apply(
+                transformer_moe,
+                inplace=True,
+                old_symbol_map_new_symbol={"Batch": "MicroBatch"},
+            )
 
         if args.weight_sharded:
             transformer_moe = ReplicateGraph.apply(
