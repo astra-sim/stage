@@ -3,4 +3,5 @@ numpy
 pandas
 graphviz
 tqdm
+protobuf
 
