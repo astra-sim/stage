@@ -106,9 +106,25 @@ comm_group.json  workload.0.et  workload.1.et  workload.2.et  workload.3.et
   ```
 
 
-## Tool workflow
-Here is a breif workflow about how stg generate traces step by step.
-![alt text](./docs/images/stg_workflow.png)
+## More Details
+Please refer to this paper: https://arxiv.org/abs/2511.10480
+
+## Citation
+Please cite following if you are using this tool
+```
+@inproceedings{man2026stage,
+  author    = {Changhai Man and
+               Joongun Park and
+               Hanjiang Wu and
+               Huan Xu and
+               Srinivas Sridharan and
+               Tushar Krishna},
+  title     = {Scalable Synthesis of Distributed LLM Workloads through Symbolic Tensor Graphs},
+  booktitle = {Proceedings of the 53rd Annual IEEE/ACM International Symposium on Computer Architecture (ISCA ’26)},
+  year      = {2026}
+}
+
+```
 
 ## Chakra Schema Version
 
