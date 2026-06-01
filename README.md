@@ -1,14 +1,14 @@
 
 ---
 
-# Symbolic Tensor Graph (STG) Generator
+# STAGE: A Symbolic Tensor grAph GEnerator for distributed AI system co-design
 
 **Author:** Changhai Man @ [SynergyLab](https://synergy.ece.gatech.edu/)    
 **Contact:** cman8@gatech.edu
 
 ## Overview
 
-The Symbolic Tensor Graph is a generator for [Chakra Execution Trace (ET)](https://github.com/mlcommons/chakra) files. This tool is designed to generate synthetic workload traces for use in parallel strategy exploration without gathering data from a real system or implementing actual workload codes. It supports various parallelization strategies like Data Parallelism (DP), Tensor Parallelism (TP), Pipeline Parallelism (PP) and Sequence Parallelism (SP).
+**STAGE** is a generator for [Chakra Execution Trace (ET)](https://github.com/mlcommons/chakra) files. This tool is designed to generate synthetic workload traces for use in parallel strategy exploration without gathering data from a real system or implementing actual workload codes. It supports various parallelization strategies like Data Parallelism (DP), Tensor Parallelism (TP), Pipeline Parallelism (PP) and Sequence Parallelism (SP).
 
 ### Key Features
 - Generate synthetic transformer workloads in Chakra ET format.
@@ -17,19 +17,24 @@ The Symbolic Tensor Graph is a generator for [Chakra Execution Trace (ET)](https
 
 ## Installation
 
+**NEW**: Docker is recommended if your environment allows, check `Dockerfile`.
+
 To set up the environment and install the required dependencies, follow these steps:
 
 ```bash
 # Clone the repository
-git clone git@github.com:astra-sim/symbolic_tensor_graph.git
+git clone git@github.com:astra-sim/stage.git
 
 # Navigate to the project directory
-cd symbolic_tensor_graph
+cd stage
 
 # Install dependencies via conda
 conda create -n <env_name>
 conda activate <env_name>
 conda install numpy sympy python-graphviz protobuf pandas -c conda-forge
+
+# or pip is preferred
+python -m pip install -r ./requirments.txt
 ```
 
 ## Usage
@@ -129,8 +134,10 @@ Please cite following if you are using this tool
 ## Chakra Schema Version
 
 The schema version used determines compatibility with different tools and repositories:
-- **v0.0.4**: Current latest chakra version (by Oct.6 2024).
+- **v0.0.4**: Current latest chakra version (by Jun.1, 2026).
 - **v0.0.1**: Supported for lagacy, not fully tested.
+
+Feel free to adapt it to our own format according to what you need. Please check the readout trasition layer at `symbolic_tensor_graph/chakra/backends`. An example for json output is provided.
 
 ## License
 
